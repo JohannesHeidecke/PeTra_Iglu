@@ -2,7 +2,7 @@
     "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
     "description": "This context represents a tweet from twitter.com",
     "self": {
-        "vendor": "org.petra.context",
+        "vendor": "org.petra.context.twitter",
         "name": "tweet",
         "format": "jsonschema",
         "version": "1-0-0"
@@ -12,8 +12,8 @@
         "id": {
             "description": "The unique ID of the tweet, see https://developer.twitter.com/en/docs/twitter-ids",
             "type": "string",
-            "minLength": 8,
-            "maxLength": 20
+            "pattern": "^[0-9]{8,32}$",
+            "maxLength": 32
         }
     },
     "required": ["id"],

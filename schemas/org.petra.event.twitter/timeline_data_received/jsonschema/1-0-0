@@ -1,0 +1,27 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "description": "A response with timeline data was received from the twitter API.",
+    "self": {
+        "vendor": "org.petra.event.twitter",
+        "name": "timeline_data_received",
+        "format": "jsonschema",
+        "version": "1-0-0"
+    },
+    "type": "object",
+    "properties": {
+        "globalObjects": {
+            "description": "A dictionary of loaded objects, part of the response from the twitter API.",
+            "type": "object",
+            "properties": {
+                "tweets": {
+                    "type": "object",
+                    "description": "A dictionary of loaded tweets"
+                }
+            },
+            "required": ["tweets"],
+            "additionalProperties": true
+        }
+    },
+    "required": ["globalObjects"],
+    "additionalProperties": false
+}

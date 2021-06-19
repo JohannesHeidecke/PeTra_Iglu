@@ -1,8 +1,8 @@
 {
     "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
-    "description": "A tweet leaves the (estimated) attention of the user, e.g. by scrolling away, being inactive, changing the tab, leaving the site. Required contexts: [org.petra.context.tweet]",
+    "description": "A tweet leaves the (estimated) attention of the user, e.g. by scrolling away, being inactive, changing the tab, leaving the site. Required contexts: [org.petra.context.twitter.tweet]",
     "self": {
-        "vendor": "org.petra.event",
+        "vendor": "org.petra.event.twitter",
         "name": "tweet_leaves_attention",
         "format": "jsonschema",
         "version": "1-0-0"
