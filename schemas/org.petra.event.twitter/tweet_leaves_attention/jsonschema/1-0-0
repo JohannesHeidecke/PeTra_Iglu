@@ -14,8 +14,13 @@
             "type": "number",
             "minimum": 0,
             "maximum": 1e8
+        },
+        "reason": {
+            "description": "The reason for why the tweet is estimated to leave the user's attention",
+            "type": "string",
+            "enum": ["TAB_HIDDEN", "TAB_UNLOADED", "TWEET_DISAPPEARED_EVENT", "USER_INACTIVE", "WINDOW_HIDDEN"]
         }
     },
-    "required": ["duration_in_s"],
+    "required": ["duration_in_s", "reason"],
     "additionalProperties": false
 }
